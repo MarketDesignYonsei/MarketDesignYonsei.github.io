@@ -85,7 +85,7 @@ a:hover { color: var(--navy-dark); }
 .hero .net {
   position: absolute; right: -40px; top: 50%;
   transform: translateY(-50%);
-  width: 460px; height: auto; opacity: .55;
+  width: min(460px, 34vw); height: auto; opacity: .55;
   pointer-events: none;
 }
 .hero .net.left { right: auto; left: -60px; transform: translateY(-50%) scaleX(-1); opacity: .25; }
