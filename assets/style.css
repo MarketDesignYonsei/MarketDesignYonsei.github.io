@@ -131,12 +131,12 @@ main li { margin: .3rem 0; }
 
 /* research area list */
 .areas { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
-.areas li {
+.areas > li {
   margin: 0; padding: 1rem 1.25rem;
   border-left: 4px solid var(--navy);
   background: var(--bg-soft);
 }
-.areas strong { display: block; color: var(--navy); font-family: "Roboto", "Noto Sans KR", sans-serif; }
+.areas > li > strong { display: block; color: var(--navy); font-family: "Roboto", "Noto Sans KR", sans-serif; }
 
 /* cycle */
 .cycle {
@@ -230,3 +230,27 @@ footer p { margin: 0; line-height: 1.6; }
   .cycle .arrow { transform: rotate(90deg); flex-basis: 100%; text-align: center; }
   .cycle .step { max-width: none; }
 }
+
+/* related research (expandable) */
+details.rel { margin-top: .7rem; }
+details.rel summary {
+  cursor: pointer; display: inline-block;
+  color: var(--navy); font-weight: 600; font-size: .95rem;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  list-style: none;
+}
+details.rel summary::-webkit-details-marker { display: none; }
+details.rel summary::before { content: "▸"; display: inline-block; width: 1em; transition: transform .15s; }
+details.rel[open] summary::before { transform: rotate(90deg); }
+details.rel summary:hover { text-decoration: underline; }
+.publist { margin: .7rem 0 .2rem; padding-left: 1.6rem; font-size: .93rem; line-height: 1.6; }
+.publist li { margin: .45rem 0; }
+.publist a { text-decoration: none; }
+.publist a:hover { text-decoration: underline; }
+.tag {
+  display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .02em;
+  padding: 0 .4rem; border-radius: 3px; vertical-align: 1px; white-space: nowrap;
+}
+.tag.wp { border: 1px solid var(--muted); color: var(--muted); }
+.tag.acc { border: 1px solid var(--navy); color: var(--navy); }
+p.note { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); }
