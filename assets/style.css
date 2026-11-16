@@ -1,0 +1,232 @@
+/* Market Design Lab, Yonsei University */
+:root {
+  --navy: #003876;
+  --navy-dark: #002a5a;
+  --ink: #212121;
+  --muted: #5f6368;
+  --line: #e3e6ea;
+  --bg-soft: #f5f7fa;
+  --max: 960px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink);
+  background: #fff;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+a { color: var(--navy); }
+a:hover { color: var(--navy-dark); }
+
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem 1rem; z-index: 100; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--navy);
+  color: #fff;
+}
+.topbar .inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .7rem 1.5rem;
+  gap: 1rem;
+}
+.brand {
+  display: flex; align-items: center; gap: .75rem;
+  color: #fff; text-decoration: none;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 700; font-size: 1.15rem; letter-spacing: .04em;
+}
+.brand:hover { color: #fff; }
+.brand img {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: #fff; padding: 1px;
+}
+.nav { display: flex; align-items: center; gap: 1.6rem; }
+.nav a {
+  color: rgba(255,255,255,.85); text-decoration: none;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: .97rem; font-weight: 500;
+}
+.nav a:hover, .nav a[aria-current="page"] { color: #fff; }
+.nav a[aria-current="page"] { font-weight: 700; }
+.nav .lang {
+  border: 1px solid rgba(255,255,255,.6); border-radius: 3px;
+  padding: .1rem .55rem; font-size: .85rem;
+}
+.nav .lang:hover { background: rgba(255,255,255,.12); }
+
+.menu-toggle {
+  display: none;
+  background: none; border: 0; color: #fff; cursor: pointer;
+  font-size: 1.5rem; line-height: 1; padding: .2rem .4rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 3.5rem 1.5rem 4rem;
+}
+.hero.small { padding: 2.2rem 1.5rem 2.6rem; }
+.hero .net {
+  position: absolute; right: -40px; top: 50%;
+  transform: translateY(-50%);
+  width: 460px; height: auto; opacity: .55;
+  pointer-events: none;
+}
+.hero .net.left { right: auto; left: -60px; transform: translateY(-50%) scaleX(-1); opacity: .25; }
+.hero h1 {
+  position: relative;
+  margin: 0;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.25;
+}
+.hero.small h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+.hero .sub {
+  position: relative;
+  margin: .9rem 0 0;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  color: rgba(255,255,255,.85);
+}
+.hero .sub a { color: #fff; }
+
+/* ---------- Content ---------- */
+main { max-width: var(--max); margin: 0 auto; padding: 2.5rem 1.5rem 3.5rem; }
+
+main h2 {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: var(--navy);
+  margin: 2.6rem 0 1rem;
+  line-height: 1.3;
+}
+main h2:first-child { margin-top: .5rem; }
+main h3 {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-weight: 700; font-size: 1.2rem; color: var(--navy);
+  margin: 1.8rem 0 .5rem;
+}
+main p { margin: 0 0 1rem; }
+main ul, main ol { padding-left: 1.4rem; margin: 0 0 1rem; }
+main li { margin: .3rem 0; }
+.en-term { color: var(--muted); }
+
+/* research area list */
+.areas { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.areas li {
+  margin: 0; padding: 1rem 1.25rem;
+  border-left: 4px solid var(--navy);
+  background: var(--bg-soft);
+}
+.areas strong { display: block; color: var(--navy); font-family: "Roboto", "Noto Sans KR", sans-serif; }
+
+/* cycle */
+.cycle {
+  display: flex; flex-wrap: wrap; align-items: stretch; justify-content: center;
+  gap: .5rem; margin: 1.5rem 0 1.8rem;
+}
+.cycle .step {
+  flex: 1 1 180px; max-width: 240px;
+  border: 1px solid var(--navy); border-radius: 4px;
+  padding: .8rem 1rem; text-align: center;
+}
+.cycle .step b { display: block; color: var(--navy); font-family: "Roboto", "Noto Sans KR", sans-serif; }
+.cycle .step span { font-size: .92rem; color: var(--muted); }
+.cycle .arrow { align-self: center; color: var(--navy); font-size: 1.4rem; }
+
+/* process steps */
+.process { counter-reset: s; list-style: none; padding: 0; }
+.process li {
+  counter-increment: s; position: relative;
+  padding: .35rem 0 .35rem 2.6rem;
+}
+.process li::before {
+  content: counter(s);
+  position: absolute; left: 0; top: .35rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  background: var(--navy); color: #fff;
+  font-size: .9rem; font-weight: 700; line-height: 1.8rem; text-align: center;
+}
+
+/* people */
+.person {
+  display: grid; grid-template-columns: 150px 1fr; gap: 1.6rem;
+  padding: 1.8rem 0; border-top: 1px solid var(--line);
+}
+.person:first-of-type { border-top: 0; }
+.person .ph {
+  width: 150px; height: 200px; object-fit: cover; border-radius: 3px;
+  background: var(--bg-soft);
+}
+.person .ph.blank {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy); font-family: "Roboto", sans-serif; font-size: 2.4rem; font-weight: 700;
+  border: 1px solid var(--line);
+}
+.person h3 { margin: 0; font-size: 1.35rem; }
+.person h3 .en { font-weight: 400; color: var(--muted); font-size: 1.05rem; margin-left: .35rem; }
+.person .role { margin: .2rem 0 .6rem; font-weight: 600; }
+.person .links { margin: 0 0 .6rem; font-size: .95rem; }
+.person .links span + span::before { content: "·"; margin: 0 .5rem; color: var(--muted); }
+.person ul { margin: 0; font-size: .95rem; }
+.person .fields { margin: .6rem 0 0; font-size: .95rem; }
+
+.people-mini { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; }
+.people-mini li { margin: 0; }
+
+/* contact */
+.contact { background: var(--bg-soft); padding: 1.2rem 1.4rem; border-radius: 4px; }
+.contact p { margin: .2rem 0; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
+footer .inner {
+  max-width: var(--max); margin: 0 auto; padding: 1.6rem 1.5rem 2.2rem;
+  display: flex; gap: 1rem; align-items: center;
+}
+footer img { width: 44px; height: 44px; }
+footer p { margin: 0; line-height: 1.6; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
+  .nav {
+    display: none;
+    position: absolute; left: 0; right: 0; top: 100%;
+    background: var(--navy);
+    flex-direction: column; align-items: flex-start; gap: 0;
+    padding: .5rem 1.5rem 1rem;
+    border-top: 1px solid rgba(255,255,255,.15);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: .55rem 0; width: 100%; }
+  .nav .lang { width: auto; margin-top: .4rem; }
+  .hero .net { width: 300px; right: -90px; opacity: .3; }
+  .hero .net.left { display: none; }
+  .person { grid-template-columns: 1fr; gap: 1rem; }
+  .person .ph { width: 120px; height: 160px; }
+  .cycle .arrow { transform: rotate(90deg); flex-basis: 100%; text-align: center; }
+  .cycle .step { max-width: none; }
+}

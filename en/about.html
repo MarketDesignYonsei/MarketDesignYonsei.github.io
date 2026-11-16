@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Market Design Lab, Yonsei University</title>
+<meta name="description" content="Background, mission, and approach of the Market Design Lab.">
+<link rel="alternate" hreflang="ko" href="https://marketdesignyonsei.github.io/about.html">
+<link rel="alternate" hreflang="en" href="https://marketdesignyonsei.github.io/en/about.html">
+<link rel="icon" type="image/png" href="../assets/img/yonsei-emblem-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="index.html"><img src="../assets/img/yonsei-emblem-sm.png" alt="">MDL</a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">&#9776;</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="research.html">Research</a>
+      <a href="people.html">People</a>
+      <a class="lang" href="../about.html" lang="ko">한국어</a>
+    </nav>
+  </div>
+</header>
+<section class="hero small">
+  <img class="net" src="../assets/img/network.svg" alt="">
+  <img class="net left" src="../assets/img/network.svg" alt="">
+  <h1>About</h1>
+</section>
+<main id="main">
+<h2>What Is Market Design?</h2>
+<p>Game theory has developed methods for analyzing how individuals and organizations behave under a given set of rules, and it has been applied to a wide range of social and economic problems over the past several decades. As game theory matured as a theory of rational behavior under given rules, a field emerged that reverses the question: which rules (institutions) should be designed to bring about desirable outcomes? This field is market design.</p>
+<p>Market design is an interdisciplinary field built on collaboration between economics, computer science, and other disciplines. Its goal is not only to derive theoretically sound solutions but also to implement them in practice. Its main theoretical foundations are matching theory and auction theory. Matching theory studies how to assign people and organizations to the right places, and auction theory studies how to allocate valuable resources, such as spectrum licenses and airport landing slots, to the right parties. Auction theory addresses settings in which monetary transfers are possible, whereas matching theory mainly addresses settings in which monetary transfers are ruled out for legal or ethical reasons, such as school assignment, organ transplantation, and public housing allocation.</p>
+
+<h2>Background</h2>
+<h3>International Developments</h3>
+<p>Market design has advanced substantially as theoretical results developed at Stanford University, MIT, Harvard University, and elsewhere have been applied to policy and industry. Kidney exchange, the National Resident Matching Program (NRMP) in the United States, school choice in many countries, and spectrum auctions are leading examples of market design contributing to the solution of real-world problems. The University of Tokyo Market Design Center (UTMD) combines research and implementation in applying market design to problems such as daycare waitlists, medical residency matching, and the allocation of medical resources during the COVID-19 pandemic.</p>
+<h3>The Situation in Korea</h3>
+<p>In Korea, market design research remains limited to a small number of individual researchers, and there is no dedicated research organization or systematic channel to social implementation. At the same time, many problems in Korean society call for a market design approach. Daycare and kindergarten assignment, personnel assignment and transfers in public institutions, college admissions and school assignment, allocation of organs to transplant candidates, public rental housing assignment, and congestion in public service reservation systems are cases in which reliance on first-come-first-served or customary rules has produced inefficiency and unfairness. The engineering approach developed in market design makes it possible to redesign these systems based on insights from the social sciences.</p>
+<p>The School of Economics at Yonsei University has faculty members specializing in fields closely related to market design, including matching theory, auction theory, mechanism design, information economics, and game theory. The Market Design Lab brings these faculty members together and aims to serve as a center for market design research in Korea.</p>
+
+<h2>Mission</h2>
+<p>The mission of the Market Design Lab is to build a cycle that connects the following three activities.</p>
+<div class="cycle" role="list">
+  <div class="step" role="listitem"><b>1. Basic Research</b><span>We advance the theoretical foundations of market design, including matching theory, auction theory, and mechanism design.</span></div>
+  <div class="arrow" aria-hidden="true">→</div>
+  <div class="step" role="listitem"><b>2. Implementation</b><span>We apply theoretical insights to the design of policies, institutions, and systems to address social problems.</span></div>
+  <div class="arrow" aria-hidden="true">→</div>
+  <div class="step" role="listitem"><b>3. Feedback to Theory</b><span>We take the problems and constraints revealed in implementation as new research questions and develop the theory further.</span></div>
+</div>
+<p>Through this cycle of theory, implementation, feedback, and theoretical development, we aim to produce research that is both academically rigorous and practically useful.</p>
+
+<h2>Approach</h2>
+<h3>Collaboration with Neighboring Fields</h3>
+<p>The core of market design is allocating the right resources to the right places. Implementing this as a working system requires knowledge beyond the scope of traditional economics. For example, finding an optimal assignment within a practical amount of time is difficult without knowledge of computer science. With economics at the center, we pursue collaboration with computer science, statistics, engineering, and other neighboring fields.</p>
+<h3>Engineering Process for Implementation</h3>
+<p>We organize the application of theory to practice into the following steps.</p>
+<ol class="process">
+  <li>Detailed investigation of current practice in the field</li>
+  <li>Identification of the key theoretical issues</li>
+  <li>Derivation of a theoretical solution to the problem</li>
+  <li>Verification through computer simulation</li>
+  <li>Small-scale pilot application</li>
+  <li>Full-scale implementation</li>
+</ol>
+<p>Where appropriate, we also consider developing general-purpose software and providing it as a web service.</p>
+<h3>Advancing the Theoretical Foundations</h3>
+<p>We formulate and solve, as new theoretical problems, the practical requirements that arise in implementation and that existing research has not addressed. In this way we contribute not only to applications but also to the development of market design theory itself.</p>
+
+</main>
+<footer>
+  <div class="inner">
+    <img src="../assets/img/yonsei-emblem-sm.png" alt="">
+    <p>The Market Design Lab is a research lab of the <a href="http://yeri.yonsei.ac.kr/">Yonsei Economic Research Institute</a>.<br>Yonsei University, 50 Yonsei-ro, Seodaemun-gu, Seoul 03722, Republic of Korea</p>
+  </div>
+</footer>
+</body>
+</html>
