@@ -254,3 +254,9 @@ details.rel summary:hover { text-decoration: underline; }
 .tag.wp { border: 1px solid var(--muted); color: var(--muted); }
 .tag.acc { border: 1px solid var(--navy); color: var(--navy); }
 p.note { margin-top: 1.4rem; font-size: .9rem; color: var(--muted); }
+
+/* history */
+.history { list-style: none; padding: 0; margin: 0 0 1rem; }
+.history li { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: .5rem 0; border-bottom: 1px solid var(--line); margin: 0; }
+.history .date { font-weight: 700; color: var(--navy); font-family: "Roboto", "Noto Sans KR", sans-serif; }
+@media (max-width: 760px) { .history li { grid-template-columns: 1fr; gap: .1rem; } }
